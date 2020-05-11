@@ -26,7 +26,7 @@ FH multiple sclerosis	CUI=C0455388	PREF=FH multiple sclerosis
 Secondary progressive multiple sclerosis	CUI=C0751965	PREF=Secondary progressive multiple sclerosis
 Family history: Multiple sclerosis	CUI=C0455388	PREF=Family history: Multiple sclerosis
 Secondary progressive multiple sclerosis (disorder)	CUI=C0751965	PREF=Secondary progressive multiple sclerosis (disorder)
-Relapsing remitting multiple sclerosis (disorder)	CUI=C0751967	PREF=Relapsing remitting multiple sclerosis (disorder)
+RRMS	CUI=C0751967	PREF=Relapsing remitting multiple sclerosis (disorder)
 Relapsing remitting multiple sclerosis	CUI=C0751967	PREF=Relapsing remitting multiple sclerosis
 Primary progressive multiple sclerosis (disorder)	CUI=C0751964	PREF=Primary progressive multiple sclerosis (disorder)
 Primary progressive multiple sclerosis	CUI=C0751964	PREF=Primary progressive multiple sclerosis
@@ -171,7 +171,7 @@ Multiple sclerosis of brain stem	CUI=C0270784	PREF=Multiple sclerosis of brain s
 Brain stem multiple sclerosis (disorder)	CUI=C0270784	PREF=Brain stem multiple sclerosis (disorder)
 Multiple sclerosis of the brainstem (disorder)	CUI=C0270784	PREF=Multiple sclerosis of the brainstem (disorder)
 Remittent-prog mult sclerosis	CUI=C0393666	PREF=Remittent-prog mult sclerosis
-Remittent-progressive multiple sclerosis	CUI=C0393666	PREF=Remittent-progressive multiple sclerosis
+RPMS	CUI=C0393666	PREF=Remittent-progressive multiple sclerosis
 Multiple sclerosis (MS) remitting progressive	CUI=C0393666	PREF=Multiple sclerosis (MS) remitting progressive
 Progressive relapsing multiple sclerosis (disorder)	CUI=C0393666	PREF=Progressive relapsing multiple sclerosis (disorder)
 Progressive relapsing multiple sclerosis	CUI=C0393666	PREF=Progressive relapsing multiple sclerosis
@@ -185,9 +185,10 @@ Malignant multiple sclerosis	CUI=C2586221	PREF=Malignant multiple sclerosis
 Malignant multiple sclerosis (disorder)	CUI=C2586221	PREF=Malignant multiple sclerosis (disorder)
 Multiple sclerosis, ichthyosis, factor VIII deficiency syndrome	CUI=C4518551	PREF=Multiple sclerosis, ichthyosis, factor VIII deficiency syndrome
 Multiple sclerosis, ichthyosis, factor VIII deficiency syndrome (disorder)	CUI=C4518551	PREF=Multiple sclerosis, ichthyosis, factor VIII deficiency syndrome (disorder)
-Secondary progressive multiple sclerosis	CUI=C0751965	PREF=Secondary progressive multiple sclerosis
+SPMS	CUI=C0751965	PREF=Secondary progressive multiple sclerosis
 Secondary progressive multiple sclerosis (disorder)	CUI=C0751965	PREF=Secondary progressive multiple sclerosis (disorder)
 Multiple sclerosis (MS) secondary progressive	CUI=C0751965	PREF=Multiple sclerosis (MS) secondary progressive
 Primary progressive multiple sclerosis (disorder)	CUI=C0751964	PREF=Primary progressive multiple sclerosis (disorder)
-Primary progressive multiple sclerosis	CUI=C0751964	PREF=Primary progressive multiple sclerosis
+PPMS	CUI=C0751964	PREF=Primary progressive multiple sclerosis
 Multiple sclerosis (MS) primary progressive	CUI=C0751964	PREF=Multiple sclerosis (MS) primary progressive
+MS	CUI=C0026769	PREF=MS
