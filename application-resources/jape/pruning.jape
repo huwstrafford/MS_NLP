@@ -3,6 +3,9 @@ MultiPhase:	Pruning
 Phases:
 annotation-pruning
 cleaning
+cleaning2
 NegationCleanUp
 NegationCleanup2
-removeUselessLookups
+NegationCleanup3
+NegationCleanup4
+NegationBack
