@@ -36,3 +36,6 @@ daydate.lst:time:date::DayDate
 units.lst:quantity:unit::Unit
 clinicdate.lst:dates:clinic::PatientDates
 EDSS.lst:MS:edss::EDS
+personAge.lst:person:time::Lookup2
+PointInTime.lst:time:since::PointInTime
+DiagnosisTriggers.lst:diagnosis:::DiagnosisTriggers
