@@ -1,0 +1,13 @@
+Phase: DiagnosisMSTriggers
+Input:  Lookup DiagnosisTriggers NewParagraph Sentence
+Options: control=all
+
+
+Rule: DiagnosisMSTriggers
+(
+    ({DiagnosisTriggers.majorType == "diagnosis"})
+	({Lookup.minorType == MSDiagnosis, Lookup.Experiencer == Patient, Lookup.Negation == Affirmed, Lookup.Temporality != "hypothetical"}):item
+):label
+-->
+:item.Diagnosis = { rule = "DiagnosisMSTriggers", PREF = :item.Lookup.PREF, CUI = :item.Lookup.CUI, STY = :item.Lookup.STY, Negation = :item.Lookup.Negation,
+Experiencer = :item.Lookup.Experiencer, Temporality = :item.Lookup.Temporality, Certainty = :item.Lookup.Certainty}
