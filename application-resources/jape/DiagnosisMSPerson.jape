@@ -1,5 +1,5 @@
 Phase: DiagnosisMSPerson
-Input:  Person Sentence Lookup DiagnosisTriggers
+Input:  Person Sentence MSDiagnosis DiagnosisTriggers
 Options: control=all
 
 
@@ -8,9 +8,10 @@ Priority: 100
 (
 	(
 	{Person}
-	({Lookup.minorType == MSDiagnosis, Lookup.Experiencer == Patient, Lookup.Negation == Affirmed, Lookup.Temporality != "hypothetical"}):match
+	({MSDiagnosis.Experiencer == Patient, MSDiagnosis.Negation == Affirmed, MSDiagnosis.Temporality != "hypothetical"}):match
 	)
 ):match1
 -->
-:match.Diagnosis = {rule = DiagnosisMSPerson, PREF = :match.Lookup.PREF, CUI = :match.Lookup.CUI,
-Negation = :match.Lookup.Negation, Certainty = :match.Lookup.Certainty}
+:match.Diagnosis = {rule = DiagnosisMSPerson, PREF = :match.MSDiagnosis.PREF, CUI = :match.MSDiagnosis.CUI, STY = :match.MSDiagnosis.STY,
+Negation = :match.MSDiagnosis.Negation, Experiencer = :match.MSDiagnosis.Experiencer, Temporality = :match.MSDiagnosis.Temporality,
+Certainty = :match.MSDiagnosis.Certainty}

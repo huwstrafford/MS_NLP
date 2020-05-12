@@ -1,13 +1,14 @@
 Phase: DiagnosisMSTriggers
-Input:  Lookup DiagnosisTriggers NewParagraph Sentence
+Input:  MSDiagnosis DiagnosisTriggers NewParagraph Sentence
 Options: control=all
 
 
 Rule: DiagnosisMSTriggers
 (
     ({DiagnosisTriggers.majorType == "diagnosis"})
-	({Lookup.minorType == MSDiagnosis, Lookup.Experiencer == Patient, Lookup.Negation == Affirmed, Lookup.Temporality != "hypothetical"}):item
+	({MSDiagnosis.Experiencer == Patient, MSDiagnosis.Negation == Affirmed, MSDiagnosis.Temporality != "hypothetical"}):item
 ):label
 -->
-:item.Diagnosis = { rule = "DiagnosisMSTriggers", PREF = :item.Lookup.PREF, CUI = :item.Lookup.CUI, STY = :item.Lookup.STY, Negation = :item.Lookup.Negation,
-Experiencer = :item.Lookup.Experiencer, Temporality = :item.Lookup.Temporality, Certainty = :item.Lookup.Certainty}
+:item.Diagnosis = { rule = "DiagnosisMSTriggers", PREF = :item.MSDiagnosis.PREF, CUI = :item.MSDiagnosis.CUI, STY = :item.MSDiagnosis.STY,
+Negation = :item.MSDiagnosis.Negation, Experiencer = :item.MSDiagnosis.Experiencer, Temporality = :item.MSDiagnosis.Temporality, 
+Certainty = :item.MSDiagnosis.Certainty}
