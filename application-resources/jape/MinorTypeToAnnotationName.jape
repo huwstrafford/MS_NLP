@@ -1,0 +1,22 @@
+Imports: {import static gate.Utils.*; }
+Phase: MinorTypeToAnnotationName
+Input: Lookup
+Options: control=all
+
+
+Rule: DiagnosisMSPerson
+Priority: 100
+(  
+ {Lookup.minorType != Drug}  
+):Lookup  
+-->
+{  
+AnnotationSet lookup = bindings.get("Lookup");
+Annotation lookupAnn = lookup.iterator().next();
+//FeatureMap features = Factory.newFeatureMap();
+FeatureMap lookupFeatures = lookupAnn.getFeatures();
+String minorType = lookupAnn.getFeatures().get("minorType").toString();
+//features.put("gender", lookupAnn.getFeatures().get("minorType"));
+//features.put("rule", "FirstName");
+outputAS.add(lookup.firstNode(), lookup.lastNode(), minorType, lookupFeatures);
+}
