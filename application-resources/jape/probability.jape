@@ -13,7 +13,7 @@ Options: control=appelt
 Rule: prob1
 (
 	({Lookup2.minorType == probability}):prob
-	({Lookup.majorType == umls}):umls
+	({Lookup}):umls
 ):match
 -->
 :umls {
