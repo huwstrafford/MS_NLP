@@ -1,0 +1,14 @@
+Phase: WalkingDistance
+Input:  Walk NumberRange DistanceUnits Spilt Sentence DistanceMeasurement
+Options: control=all
+
+
+Rule: WalkingDistance
+(
+    ({Walk})
+	({DistanceMeasurement}):item
+):label
+-->
+:label.WalkingDistance = { rule = "WalkingDistance", Distance = :label.DistanceMeasurement.Distance, UpperDistance = :label.DistanceMeasurement.UpperDistance, 
+LowerDistance = :label.DistanceMeasurement.LowerDistance, Units = :label.DistanceMeasurement.Units, Certainty = :item.Walk.Certainty,
+Negation = :item.Walk.Negation, Experiencer = :item.Walk.Experiencer, Temporality = :item.Walk.Temporality}

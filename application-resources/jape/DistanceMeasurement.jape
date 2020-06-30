@@ -1,0 +1,13 @@
+Phase: DistanceMeasurement
+Input:  NumberRange DistanceUnits Spilt Sentence
+Options: control=all
+
+
+Rule: WalkingDistance
+(
+    ({NumberRange})
+	({DistanceUnits}):item
+):label
+-->
+:label.DistanceMeasurement = { rule = "DistanceMeasurement", Distance = :label.NumberRange.value, UpperDistance = :label.NumberRange.N1, 
+LowerDistance = :label.NumberRange.N2, Units = :label.DistanceUnits.unit}
