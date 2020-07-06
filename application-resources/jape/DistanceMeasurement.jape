@@ -9,5 +9,13 @@ Rule: WalkingDistance
 	({DistanceUnits}):item
 ):label
 -->
-:label.DistanceMeasurement = { rule = "DistanceMeasurement", Distance = :label.NumberRange.value, UpperDistance = :label.NumberRange.N1, 
-LowerDistance = :label.NumberRange.N2, Units = :label.DistanceUnits.unit}
+:label.DistanceMeasurement = { rule = "DistanceMeasurement", Distance = :label.NumberRange.value, UpperDistance = :label.NumberRange.N2, 
+LowerDistance = :label.NumberRange.N1, Units = :label.DistanceUnits.unit}
+
+
+Rule: WalkingDistanceComplete
+(
+	({DistanceUnits.Complete == Yes}):item
+):label
+-->
+:label.DistanceMeasurement = { rule = "DistanceMeasurement", Distance = :label.DistanceUnits.Distance, Units = :label.DistanceUnits.unit}

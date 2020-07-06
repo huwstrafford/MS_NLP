@@ -2,4 +2,5 @@ MultiPhase: Walking
 Phases:
 
 DistanceMeasurement
+WalkingCategory
 WalkingDistance

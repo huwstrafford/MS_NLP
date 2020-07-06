@@ -1,11 +1,23 @@
 Yard:unit=Yard
 Yards:unit=Yard
-Meter:unit=Meter
-Meters:unit=Meter
-Kilometers:unit=Kilometer
-Kilometer:unit=Kilometer
+Meter:unit=Metre
+Meters:unit=Metre
+Kilometers:unit=Kilometre
+Kilometer:unit=Kilometre
 Mile:unit=Mile
 Miles:unit=Mile
-KM:unit=Kilometer
-KMs:unit=Kilometer
-m:unit=Meter
+KM:unit=Kilometre
+KMs:unit=Kilometre
+m:unit=Metre
+Metres:unit=Metre
+Metre:unit=Metre
+Kilometres:unit=Kilometre
+Kilometre:unit=Kilometre
+A kilometre:unit=Kilometre:Complete=Yes:Distance=1
+A Mile:unit=Mile:Complete=Yes:Distance=1
+A Kilometer:unit=Kilometre:Complete=Yes:Distance=1
+Half a kilometre:unit=Kilometre:Complete=Yes:Distance=0.5
+Half a Mile:unit=Mile:Complete=Yes:Distance=0.5
+Half a Kilometer:unit=Kilometre:Complete=Yes:Distance=0.5
+Steps:unit=Step
+Step:unit=Step

@@ -10,5 +10,6 @@ Rule: WalkingDistance
 ):label
 -->
 :label.WalkingDistance = { rule = "WalkingDistance", Distance = :label.DistanceMeasurement.Distance, UpperDistance = :label.DistanceMeasurement.UpperDistance, 
-LowerDistance = :label.DistanceMeasurement.LowerDistance, Units = :label.DistanceMeasurement.Units, Certainty = :item.Walk.Certainty,
-Negation = :item.Walk.Negation, Experiencer = :item.Walk.Experiencer, Temporality = :item.Walk.Temporality}
+LowerDistance = :label.DistanceMeasurement.LowerDistance, Units = :label.DistanceMeasurement.Units,
+Certainty = :label.Walk.Certainty, Negation = :label.Walk.Negation, Experiencer = :label.Walk.Experiencer, 
+Temporality = :label.Walk.Temporality, Category = :label.Walk.Category}

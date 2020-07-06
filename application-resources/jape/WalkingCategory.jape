@@ -1,0 +1,42 @@
+Imports: {import static gate.Utils.*; }
+
+Phase: WalkingCategory
+Input: WalkingCategory Walk Split Sentence
+Options: control=all
+
+/*
+ * Changed the CUI and Result for Negated Outcomes for CTs
+*/
+
+
+Rule: WalkingCategoryA
+Priority: 100
+(
+    ({WalkingCategory}):Category
+    ({Walk}):Walk
+):match
+-->
+:match{
+    AnnotationSet Category = bindings.get("Category");
+    Annotation CatAnn = Category.iterator().next();
+    String category = CatAnn.getFeatures().get("Category").toString();
+    AnnotationSet Walk = bindings.get("Walk");
+    Annotation WalkAnn = Walk.iterator().next();
+    WalkAnn.getFeatures().put("Category", category);
+    }
+
+Rule: WalkingCategoryB
+Priority: 100
+(
+    ({Walk}):Walk
+    ({WalkingCategory}):Category
+):match
+-->
+:match{
+    AnnotationSet Category = bindings.get("Category");
+    Annotation CatAnn = Category.iterator().next();
+    String category = CatAnn.getFeatures().get("Category").toString();
+    AnnotationSet Walk = bindings.get("Walk");
+    Annotation WalkAnn = Walk.iterator().next();
+    WalkAnn.getFeatures().put("Category", category);
+    }
