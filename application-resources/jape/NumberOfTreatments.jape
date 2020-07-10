@@ -1,0 +1,29 @@
+Phase: Doses
+Input:  Drug NumberRange Spilt Sentence Dose
+Options: control=all
+
+
+// 25 Doses of Drug
+Rule: Doses1
+(
+    ({NumberRange})
+    ({Dose})
+	({Drug}):item
+):label
+-->
+:label.NumberOfTreatments = { rule = "Doses1", NumberOfDoses = :label.NumberRange.value, Temporality = :label.Drug.Temporality,
+Certainty = :label.Drug.Certainty, Negation = :label.Drug.Negation, Experiencer = :label.Drug.Experiencer, 
+CUI = :label.Drug.CUI}
+
+
+// Drug 25 Doses - Drug for 25 Doses
+Rule: Doses2
+(
+	({Drug}):item
+    ({NumberRange})
+    ({Dose})
+):label
+-->
+:label.NumberOfTreatments = { rule = "Doses2", NumberOfDoses = :label.NumberRange.value, Temporality = :label.Drug.Temporality,
+Certainty = :label.Drug.Certainty, Negation = :label.Drug.Negation, Experiencer = :label.Drug.Experiencer, 
+CUI = :label.Drug.CUI}
